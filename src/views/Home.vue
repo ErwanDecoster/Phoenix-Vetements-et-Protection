@@ -73,7 +73,7 @@
             </router-link>
           </div>
           <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
-            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/2clasic_vet.png" alt="">
+            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/indoor_outdoor.webp" alt="">
           </div>
         </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
@@ -87,7 +87,7 @@
             </router-link>
           </div>
           <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
-            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/epi.png" alt="">
+            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/epi.webp" alt="">
           </div>
         </div>
       </div>
