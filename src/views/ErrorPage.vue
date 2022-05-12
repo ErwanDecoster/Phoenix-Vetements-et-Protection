@@ -1,6 +1,6 @@
 <template>
   <div class="error pt-10">
-    <div class="">
+    <div >
       <div class="py-64 m-auto max-w-screen-lg px-7 flex flex-col gap-8">
         <div class="grid grid-cols-3">
           <div class="col-span-2 flex flex-col gap-4">

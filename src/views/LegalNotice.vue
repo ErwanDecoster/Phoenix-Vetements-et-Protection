@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div >
       <div class="py-10 m-auto max-w-screen-lg pl-7 pr-11 flex flex-col gap-8">
         <h1 class="text-4xl font-bold">Mension Legal</h1>
         <div>

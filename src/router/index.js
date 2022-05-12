@@ -6,6 +6,7 @@ import Contact from '@/views/Contact.vue';
 import LegalNotice from '@/views/LegalNotice.vue';
 import ErrorPage from '@/views/ErrorPage.vue';
 import ProductDetails from '@/views/product/ProductDetails.vue';
+import ProductEPI from '@/views/product/ProductEPI.vue';
 import Tailored from '@/views/Tailored.vue';
 
 const routes = [
@@ -15,6 +16,10 @@ const routes = [
     component: Home,
     meta: {
       title: 'Accueil',
+      scrollPos: {
+        top: 0,
+        left: 0,
+      },
     },
   },
   {
@@ -35,10 +40,10 @@ const routes = [
   },
   {
     path: '/tailored',
-    name: 'Vetemnt sur mesure',
+    name: 'Vêtements sur mesure',
     component: Tailored,
     meta: {
-      title: 'Vetemnt sur mesure',
+      title: 'Vêtements sur mesure',
     },
   },
   {
@@ -66,6 +71,15 @@ const routes = [
       title: 'Produits',
     },
   },
+  {
+    path: '/product/product_epi',
+    name: 'ProductEPI',
+    component: ProductEPI,
+    props: true,
+    meta: {
+      title: 'Produits - EPI',
+    },
+  },
   // catchall 404
   {
     path: '/:catchAll(.*)',
@@ -80,15 +94,18 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    console.log(to);
-    console.log(from);
-    return savedPosition || { top: 0 };
+  scrollBehavior() {
+    // if (to.meta.title !== 'Accueil') {
+    //   console.log('OK');
+    //   return { top: 0 };
+    // }
+    // console.log('pas OK');
+    // return savedPosition;
   },
 });
 
-router.afterEach((to, from) => {
-  console.log(from);
+router.afterEach((to) => {
+  // console.log(from);
   document.title = to.meta.title;
 });
 

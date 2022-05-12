@@ -1,18 +1,17 @@
 <template>
   <div>
     <div>
-      <div class="py-10 m-auto max-w-screen-lg px-5 md:px-7">
+      <div class="py-20 m-auto max-w-screen-lg px-5 md:px-7">
         <div v-for="category in categorys" v-bind:key="category">
           <div v-show="category.name == name" class="flex flex-col gap-10 pb-16">
-            <button @click="$router.go(-1)" class="hidden lg:block py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600">Retour</button>
+            <button @click="$router.go(-1)" style="transform: translateX(calc(-100% - 2em))" class="hidden lg:block fixed py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600">Retour</button>
             <div>
-              <h1 class="w-full text-4xl font-bold text-left">Produits - {{ name }}</h1>
-              <p class="mt-4 text-lg font-bold">Les produits présentés sont des exemples parmi un large choix, bien d'autres sont disponibles.</p>
-              <p  class="mt-4 text-lg">{{ category.desc }}</p>
+              <h1 class="w-full text-4xl font-bold">Produits - {{ name }}</h1>
+              <p class="mt-4 mr-auto text-lg font-bold bg-orange-200 px-2 py-1 rounded-md">Les produits présentés sont des exemples parmi un large choix, bien d'autres sont disponibles !</p>
+              <p v-if="category.desc" class="mt-4 text-lg">{{ category.desc }}</p>
             </div>
             <div v-if="category.fourniseurs">
               <h2 class="text-2xl font-semibold pb-4">Nos principaux fourniseurs</h2>
-              <!-- <ul class="flex flex-wrap gap-14 my-3"> -->
               <ul class="fourniseur grid gap-12 my-3 justify-items-center items-center" style="">
                 <li v-for="fourniseur in category.fourniseurs" v-bind:key="fourniseur">
                   <img class="w-32" :src="require(`@/assets/logos/${fourniseur.name}.svg`)" alt="">
@@ -23,14 +22,14 @@
               <h2 class="text-2xl pb-4">{{ content.type }}</h2>
               <div v-if="content.desc" class="grid grid-cols-1 sm:grid-cols-2 justify-items-stretch gap-6 sm:gap-0">
                 <div class="image_container relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
-                  <img @click="content.modal = true" v-if="content.leftImgActive" class="object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImgActive}.webp`)" alt="">
-                  <img @click="content.modal = true" v-if="content.leftImgActive" class="duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
-                  <img @click="content.modal = true" v-if="!content.leftImgActive" class="duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
+                  <img @click="content.modal = true" v-if="content.leftImgActive" class="cursor-pointer object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImgActive}.webp`)" alt="">
+                  <img @click="content.modal = true" v-if="content.leftImgActive" class="cursor-pointer duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
+                  <img @click="content.modal = true" v-if="!content.leftImgActive" class="cursor-pointer duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
                 </div>
                 <div class="image_container relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1 sm:-left-6 sm:top-6 ">
-                  <img @click="content.modal = true" v-if="content.rightImgActive" class="object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImgActive}.webp`)" alt="">
-                  <img @click="content.modal = true" v-if="content.rightImgActive" class="duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
-                  <img @click="content.modal = true" v-if="!content.rightImgActive" class="duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
+                  <img @click="content.modal = true" v-if="content.rightImgActive" class="cursor-pointer object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImgActive}.webp`)" alt="">
+                  <img @click="content.modal = true" v-if="content.rightImgActive" class="cursor-pointer duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
+                  <img @click="content.modal = true" v-if="!content.rightImgActive" class="cursor-pointer duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
                 </div>
               </div>
               <div v-if="!content.desc" class="grid grid-cols-1 sm:grid-cols-2 justify-items-stretch gap-6 sm:gap-0">
@@ -213,9 +212,10 @@ export default {
             {
               id: 3,
               type: 'Multirisques',
-              desc: 'Ceci est une description de produit',
+              desc: 'Les environnements ATEX (atmosphères explosives) sont des zones de travail présentant des risques potentiels d\'explosions.',
               normes: [
-                { normeName: 'ISO 54' },
+                { normeName: 'EN 14605' },
+                { normeName: 'EN 13034-6' },
               ],
               leftImg: 'veste_mr_1',
               leftImgActive: 'veste_mr_1_2',
@@ -242,6 +242,10 @@ export default {
             {
               id: 5,
               type: 'Haute Visibilité',
+              desc: 'Ce type d’EPI est indispensable pour assurer qu’un ouvrier soit bien à la vue de son entourage',
+              normes: [
+                { normeName: 'EN 20471' },
+              ],
               leftImg: 'veste_hv_1',
               // leftImgActive: 'error',
               rightImg: 'patalon_hv_1',
@@ -258,6 +262,10 @@ export default {
             {
               id: 7,
               type: 'Vêtements imtemperies',
+              // desc: '',
+              normes: [
+                { normeName: 'EN 343:2019' },
+              ],
               leftImg: 'intemperie_1_1',
               leftImgActive: 'intemperie_1_2',
               rightImg: 'intemperie_2',
@@ -411,7 +419,7 @@ export default {
         },
         {
           name: 'Anti chute',
-          desc: 'Desciption des produit de la categorie Anti chute',
+          // desc: '',
           fourniseurs: [
             { name: 'Logo_Neofeu' },
           ],
@@ -437,7 +445,7 @@ export default {
         },
         {
           name: 'Hygiene',
-          // desc: 'Desciption des produit de la categorie Hygiene',
+          // desc: '',
           id: 6,
           contents: [
             {

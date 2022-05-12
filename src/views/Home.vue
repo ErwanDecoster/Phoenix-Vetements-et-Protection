@@ -1,19 +1,14 @@
 <template>
   <div class="home selection:bg-neutral-400  ">
     <HeaderCarousel :headerCarousel="headerCarousel" />
-    <div class="">
+    <div >
       <div class="py-10 m-auto max-w-screen-lg pl-7 pr-11 flex flex-col gap-20">
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="w-full flex flex-col gap-2">
-            <transition appear @before-enter="beforeEnter" @enter="enter">
-              <p class="w-full text-4xl font-bold text-left">
-                Des vêtements aux EPI nous avons ce qu'il vous faut
-              </p>
-            </transition>
-            <p class="w-full text-left text-lg">
-              <!-- + 20000 références -->
-              <span class="font-bold text-xl">Votre protection : notre préocupation.<br></span>
-              <span class="text-lg"> Pour chaque situation nous vous proposons un équipement adapté.</span><br>
+            <p class="w-full text-3xl font-bold text-left">Des vêtements aux EPI nous avons ce qu'il vous faut</p>
+            <p class="text-md">
+              <b class="text-lg">Votre protection : notre préocupation.</b><br>
+              Pour chaque situation nous vous proposons un équipement adapté.<br>
               112 fournisseurs : plus de 50 000 réferences.<br>
             </p>
           </div>
@@ -23,15 +18,11 @@
         </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="sm:order-1 w-full flex flex-col gap-2">
-            <h2 class="text-left text-xl font-semibold">
-              Donner de l'impacte à votre entreprise <br>
-              Et faites vous re-marquer
-              <!-- DONNER DE LA VISIBILIT A VOTRE ENTREPRISE <br>
-              Faites vous remarquer -->
+            <h2 class="w-full text-2xl font-bold">
+              Donner de l'impacte à votre entreprise.<br>
             </h2>
-            <p>
-              Posez votre logo en format poitrine ou dos. Celui-ci peut être sous forme de broderie, sérigraphie, transferts...
-            </p>
+            <p class="text-xl font-bold -mt-1">Et faites vous re-marquer</p>
+            <p class="text-md">Posez votre logo en format poitrine ou dos. Celui-ci peut être sous forme de broderie, sérigraphie, transferts...</p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Sérigraphie et broderie' }}">
               Voir des exemples
             </router-link>
@@ -40,19 +31,14 @@
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-cover" src="@/assets/produits/broderie_1.webp" alt="">
           </div>
         </div>
-      </div>
-    </div>
-    <div class="">
-    <!-- <div class="bg-black"> -->
-      <div class="py-10 m-auto max-w-screen-lg pl-7 pr-11 flex flex-col gap-14 text-black">
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="w-full flex flex-col gap-2">
-            <h2 class="text-left text-xl font-semibold">
+            <h2 class="w-full text-2xl font-bold">
               Vêtements sur mesure
             </h2>
-            <p class="text-[17px]">Et si nous créons un vêtement qui vous ressemblent ?</p>
-            <p class="text-sm">Nous concevons et fabriquons des vétements de travail à vos couleurs et selon vos besoins. Ainsi choisissons les couleurs du vétements, les poches utiles a votre activité et la mercerie.</p>
-            <p class="text-sm">Possible même par faible quantité.</p>
+            <p class="text-lg font-bold">Et si nous créons un vêtement qui vous ressemblent ?</p>
+            <p class="text-md">Nous concevons et fabriquons des vétements de travail à vos couleurs et selon vos besoins. Ainsi choisissons les couleurs, les poches utiles a votre activité et la mercerie.</p>
+            <p class="text-md">Possible même par faible quantité.</p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-400" to="/tailored">
               Voir des exemples
             </router-link>
@@ -63,11 +49,11 @@
         </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="sm:order-1 w-full flex flex-col gap-2">
-            <h2 class="text-left text-xl font-semibold">
+            <h2 class="w-full text-2xl font-bold">
               Service paquetage
             </h2>
             <p class="text-md">Vous ne souhaitez pas vous embêter à redistribuer vos commandes à vos salariés, pas de soucis, on s'en charge !</p>
-            <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-400" to="/tailored">
+            <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-400" to="/service">
               En voir plus
             </router-link>
           </div>
@@ -75,40 +61,13 @@
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/colis.png" alt="">
           </div>
         </div>
-      </div>
-    </div>
-    <!-- <div class="bg-black">
-      <div class="py-10 m-auto max-w-screen-lg pl-7 pr-11 flex flex-col gap-14 text-white">
-        <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
-          <div class="sm:order-1 w-full flex flex-col gap-2">
-            <h2 class="text-left text-xl font-semibold">
-              Des vêtements pour tout les milieux
-            </h2>
-            <ul class="list-disc list-inside">
-              <li>Agroalimentaire</li>
-              <li>BTP</li>
-              <li>Voirie</li>
-              <li>Chimi</li>
-              <li>Haut voltage</li>
-            </ul>
-            <router-link class="py-2 px-8 bg-white text-black rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-400" :to="{ name: 'ProductDetails', params: { name: 'Corps' }}">
-              Voir des exemples
-            </router-link>
-          </div>
-          <Carousel :slides2="slide2" />
-        </div>
-      </div>
-    </div> -->
-    <div class="">
-      <div class="py-10 m-auto max-w-screen-lg pl-7 pr-11 flex flex-col gap-14 text-black">
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="w-full flex flex-col gap-2">
-            <h2 class="text-left text-xl font-semibold">
-              Vêtements indoor et outdoor
-            </h2>
-            <p class="text-lg">Du tee-shirt à la parka ou softshell.</p>
-            <p class="text-lg">Haute visibilité ou non HV.</p>
-            <p class="text-lg">Parmi tous nos fournisseurs nous choisissons les vêtements qui vous correspondent.</p>
+            <h2 class="w-full text-2xl font-bold">Vêtements indoor et outdoor</h2>
+            <p class="text-md">
+              Du tee-shirt à la parka ou softshell. <br>
+              Haute visibilité ou non HV.</p>
+            <p class="text-md">Parmi tous nos fournisseurs nous choisissons les vêtements qui vous correspondent.</p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Vêtements' }}">
               Voir des exemples
             </router-link>
@@ -119,13 +78,11 @@
         </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="sm:order-1 w-full flex flex-col gap-2">
-            <h2 class="text-left text-xl font-semibold">
-              Des EPI pour tous les risques.
-            </h2>
-            <p class="text-lg">
+            <h2 class="w-full text-2xl font-bold">Des EPI pour tous les risques.</h2>
+            <p class="text-md">
               De la protection de la tête aux chaussures de securité.
             </p>
-            <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Tête' }}">
+            <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name : 'ProductEPI' }">
               Voir des exemples
             </router-link>
           </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="about pt-10">
-    <div class="">
+    <div >
       <div class="py-10 m-auto max-w-screen-lg px-5 sm:px-7 flex flex-col gap-14">
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="w-full flex flex-col gap-2">
@@ -70,7 +70,7 @@
       </div>
     </div> -->
     <NewsCarousel :NewsSlide="NewsSlide"/>
-    <div class="">
+    <div >
       <div class="py-10 mt-10 m-auto max-w-screen-lg px-7 flex flex-col gap-14">
         <p class="w-full text-xl font-bold text-left">
           Ils nous font confiance
