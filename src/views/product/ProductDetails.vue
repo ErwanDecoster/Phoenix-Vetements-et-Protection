@@ -21,24 +21,24 @@
             <div v-for="content in category.contents" v-bind:key="content.id">
               <h2 class="text-2xl pb-4">{{ content.type }}</h2>
               <div v-if="content.desc" class="grid grid-cols-1 sm:grid-cols-2 justify-items-stretch gap-6 sm:gap-0">
-                <div class="image_container relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+                <div class="image_container relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
                   <img @click="content.modal = true" v-if="content.leftImgActive" class="cursor-pointer object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImgActive}.webp`)" alt="">
                   <img @click="content.modal = true" v-if="content.leftImgActive" class="cursor-pointer duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
                   <img @click="content.modal = true" v-if="!content.leftImgActive" class="cursor-pointer duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
                 </div>
-                <div class="image_container relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1 sm:-left-6 sm:top-6 ">
+                <div class="image_container relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1 sm:-left-6 sm:top-6 ">
                   <img @click="content.modal = true" v-if="content.rightImgActive" class="cursor-pointer object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImgActive}.webp`)" alt="">
                   <img @click="content.modal = true" v-if="content.rightImgActive" class="cursor-pointer duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
                   <img @click="content.modal = true" v-if="!content.rightImgActive" class="cursor-pointer duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
                 </div>
               </div>
               <div v-if="!content.desc" class="grid grid-cols-1 sm:grid-cols-2 justify-items-stretch gap-6 sm:gap-0">
-                <div class="image_container relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+                <div class="image_container relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
                   <img v-if="content.leftImgActive" class="object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImgActive}.webp`)" alt="">
                   <img v-if="content.leftImgActive" class="duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
                   <img v-if="!content.leftImgActive" class="duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
                 </div>
-                <div class="image_container relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1 sm:-left-6 sm:top-6 ">
+                <div class="image_container relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1 sm:-left-6 sm:top-6 ">
                   <img v-if="content.rightImgActive" class="object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImgActive}.webp`)" alt="">
                   <img v-if="content.rightImgActive" class="duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
                   <img v-if="!content.rightImgActive" class="duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">

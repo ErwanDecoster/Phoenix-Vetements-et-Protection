@@ -10,7 +10,7 @@
             <p class="text-lg">Parfait nous vous créons vos propres vêtements.</p>
             <p class="text-lg">Démarquez vous en comumniquant par vos salariés en un vêtement unique et à votre image.</p>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="absolute w-full aspect-video rounded-sm object-cover" src="@/assets/sur_mesure.png" alt="">
           </div>
         </div>
@@ -22,7 +22,7 @@
             <p class="text-lg">Vêtement multirisques.</p>
             <router-link class="hidden lg:block py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" to="/contact">Contactez nous</router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="absolute w-full aspect-video rounded-sm object-cover" src="@/assets/sur_mesure_2.png" alt="">
           </div>
         </div>
@@ -35,7 +35,7 @@
               <li class="text-lg">Prix avantageux : aucun intermediaire.</li>
             </ul>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="absolute w-full aspect-video rounded-sm object-cover" src="https://via.placeholder.com/600x600/a9d" alt="">
           </div>
         </div>

@@ -14,4 +14,4 @@ export default {
     animatedScrollObserver.observe(el);
   },
 };
-console.log("oui");
+console.log('oui');

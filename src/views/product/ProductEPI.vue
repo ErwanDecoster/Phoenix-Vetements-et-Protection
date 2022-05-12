@@ -13,7 +13,7 @@
             </p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Tête' }}" >Voir les produits</router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-cover" src="@/assets/tete.webp" alt="">
           </div>
         </div>
@@ -27,7 +27,7 @@
             </p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Gant' }}" >Voir les produits</router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-cover" src="@/assets/main.webp" alt="">
           </div>
         </div>
@@ -41,7 +41,7 @@
             </p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Pied' }}" >Voir les produits</router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-cover" src="@/assets/pied.webp" alt="">
           </div>
         </div>
@@ -55,7 +55,7 @@
             </p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Anti chute' }}" >Voir les produits</router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-cover" src="@/assets/anti_chute.webp" alt="">
           </div>
         </div>

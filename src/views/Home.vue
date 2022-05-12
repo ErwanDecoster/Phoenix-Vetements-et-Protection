@@ -12,7 +12,8 @@
               112 fournisseurs : plus de 50 000 réferences.<br>
             </p>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <!-- <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1"> -->
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-cover" src="@/assets/2vets.png" alt="">
           </div>
         </div>
@@ -27,7 +28,7 @@
               Voir des exemples
             </router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-cover" src="@/assets/produits/broderie_1.webp" alt="">
           </div>
         </div>
@@ -43,7 +44,7 @@
               Voir des exemples
             </router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/tailored.png" alt="">
           </div>
         </div>
@@ -57,7 +58,7 @@
               En voir plus
             </router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/colis.png" alt="">
           </div>
         </div>
@@ -72,7 +73,7 @@
               Voir des exemples
             </router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/indoor_outdoor.webp" alt="">
           </div>
         </div>
@@ -86,7 +87,7 @@
               Voir des exemples
             </router-link>
           </div>
-          <div class="relative w-full p-2 rounded border-solid border-2 border-black aspect-video duration-200 hover:p-1">
+          <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/epi.webp" alt="">
           </div>
         </div>
