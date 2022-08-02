@@ -42,10 +42,10 @@
           <p class="font-bold text-center">Téléchargeable :</p>
           <ul class="mt-4 flex flex-col">
             <li class="mx-auto min-w-max">
-              <a :href="`${publicPath}documents/catalogue_hygiène.pdf`" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Hygiene</a>
+              <a :href="`documents/catalogue_hygiène.pdf`" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Hygiene</a>
             </li>
             <li class="mx-auto min-w-max">
-              <a :href="`${publicPath}documents/catalogue_epi.pdf`" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Fournisseur</a>
+              <a :href="`documents/catalogue_epi.pdf`" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Fournisseur</a>
             </li>
           </ul>
         </div>
@@ -53,34 +53,3 @@
     </div>
   </div>
 </template>
-<script>
-import axios from 'axios';
-
-export default {
-  data() {
-    return {
-      publicPath: process.env.BASE_URL,
-    };
-  },
-  mounted() {
-    this.downloadFile();
-  },
-  methods: {
-    downloadFile() {
-      axios({
-        url: 'http://localhost:8000/catalogue_hygiène.pdf', // File URL Goes Here
-        method: 'GET',
-        responseType: 'blob',
-      }).then((res) => {
-        const FILE = window.URL.createObjectURL(new Blob([res.data]));
-
-        const docUrl = document.createElement('x');
-        docUrl.href = FILE;
-        docUrl.setAttribute('download', 'file.pdf');
-        document.body.appendChild(docUrl);
-        docUrl.click();
-      });
-    },
-  },
-};
-</script>

@@ -20,9 +20,9 @@
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="sm:order-1 w-full flex flex-col gap-2">
             <h2 class="w-full text-2xl font-bold">
-              Donner de l'impacte à votre entreprise.<br>
+              Donner de l'impacte à votre entreprise<br>
             </h2>
-            <p class="text-xl font-bold -mt-1">Et faites vous re-marquer</p>
+            <p class="text-xl font-bold -mt-1">Et faites vous re-marquer.</p>
             <p class="text-md">Posez votre logo en format poitrine ou dos. Celui-ci peut être sous forme de broderie, sérigraphie, transferts...</p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Sérigraphie et broderie' }}">
               Voir des exemples
@@ -38,7 +38,7 @@
               Vêtements sur mesure
             </h2>
             <p class="text-lg font-bold">Et si nous créons un vêtement qui vous ressemblent ?</p>
-            <p class="text-md">Nous concevons et fabriquons des vétements de travail à vos couleurs et selon vos besoins. Ainsi choisissons les couleurs, les poches utiles a votre activité et la mercerie.</p>
+            <p class="text-md">Nous concevons et fabriquons des vêtements de travail à vos couleurs et selon vos besoins. Ainsi choisissons les couleurs, les poches utiles à votre activité et la mercerie.</p>
             <p class="text-md">Possible même par faible quantité.</p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-400" to="/tailored">
               Voir des exemples
@@ -53,7 +53,7 @@
             <h2 class="w-full text-2xl font-bold">
               Service paquetage
             </h2>
-            <p class="text-md">Vous ne souhaitez pas vous embêter à redistribuer vos commandes à vos salariés, pas de soucis, on s'en charge !</p>
+            <p class="text-md">Vous n'avez pas le temps de distribuer vos vêtements à vos salariés, pas de soucis, on s'en charge !</p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-400" to="/service">
               En voir plus
             </router-link>
@@ -67,7 +67,7 @@
             <h2 class="w-full text-2xl font-bold">Vêtements indoor et outdoor</h2>
             <p class="text-md">
               Du tee-shirt à la parka ou softshell. <br>
-              Haute visibilité ou non HV.</p>
+              Haute visibilité ou non.</p>
             <p class="text-md">Parmi tous nos fournisseurs nous choisissons les vêtements qui vous correspondent.</p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name: 'ProductDetails', params: { name: 'Vêtements' }}">
               Voir des exemples
@@ -79,7 +79,7 @@
         </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="sm:order-1 w-full flex flex-col gap-2">
-            <h2 class="w-full text-2xl font-bold">Des EPI pour tous les risques.</h2>
+            <h2 class="w-full text-2xl font-bold">Des EPI pour tous les risques</h2>
             <p class="text-md">
               De la protection de la tête aux chaussures de securité.
             </p>

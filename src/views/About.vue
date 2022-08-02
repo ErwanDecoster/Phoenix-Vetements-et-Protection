@@ -15,7 +15,7 @@
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="sm:order-1 w-full flex flex-col gap-2">
             <p class="w-full text-xl font-bold text-left">
-              Crée en 2018 et situé dans le nord de l’Ardeche.
+              Crée en 2018 et situé dans le nord de l’Ardeche
             </p>
             <p class="w-full text-lg text-left">
               Phoenix Vêtements et protection livre dans toute la France ses clients.

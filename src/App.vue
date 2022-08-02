@@ -125,6 +125,12 @@ export default {
   methods: {
     toggleNavbar() {
       this.showNavbar = !this.showNavbar;
+      const body = document.querySelector('body');
+      if (body.style.overflowY === 'hidden') {
+        body.style.overflowY = 'scroll';
+      } else {
+        body.style.overflowY = 'hidden';
+      }
     },
     toggleProducts() {
       this.showProduct = !this.showProduct;

@@ -20,34 +20,34 @@
             </div>
             <div v-for="content in category.contents" v-bind:key="content.id">
               <h2 class="text-2xl pb-4">{{ content.type }}</h2>
-              <div v-if="content.desc" class="grid grid-cols-1 sm:grid-cols-2 justify-items-stretch gap-6 sm:gap-0">
+              <div v-if="content.desc || content.normes" class="grid grid-cols-1 sm:grid-cols-2 justify-items-stretch gap-6 sm:gap-0">
                 <div class="image_container relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
-                  <img @click="content.modal = true" v-if="content.leftImgActive" class="cursor-pointer object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImgActive}.webp`)" alt="">
-                  <img @click="content.modal = true" v-if="content.leftImgActive" class="cursor-pointer duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
-                  <img @click="content.modal = true" v-if="!content.leftImgActive" class="cursor-pointer duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
+                  <img @click="content.modal = true; changeBodyScroll()" v-if="content.leftImgActive" class="cursor-pointer object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImgActive}.webp`)" alt="">
+                  <img @click="content.modal = true; changeBodyScroll()" v-if="content.leftImgActive" class="cursor-pointer duration-100 top object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
+                  <img @click="content.modal = true; changeBodyScroll()" v-if="!content.leftImgActive" class="cursor-pointer duration-100 object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
                 </div>
                 <div class="image_container relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1 sm:-left-6 sm:top-6 ">
-                  <img @click="content.modal = true" v-if="content.rightImgActive" class="cursor-pointer object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImgActive}.webp`)" alt="">
-                  <img @click="content.modal = true" v-if="content.rightImgActive" class="cursor-pointer duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
-                  <img @click="content.modal = true" v-if="!content.rightImgActive" class="cursor-pointer duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
+                  <img @click="content.modal = true; changeBodyScroll()" v-if="content.rightImgActive" class="cursor-pointer object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImgActive}.webp`)" alt="">
+                  <img @click="content.modal = true; changeBodyScroll()" v-if="content.rightImgActive" class="cursor-pointer duration-100 top object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
+                  <img @click="content.modal = true; changeBodyScroll()" v-if="!content.rightImgActive" class="cursor-pointer duration-100 object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
                 </div>
               </div>
-              <div v-if="!content.desc" class="grid grid-cols-1 sm:grid-cols-2 justify-items-stretch gap-6 sm:gap-0">
+              <div v-if="!content.desc && !content.normes" class="grid grid-cols-1 sm:grid-cols-2 justify-items-stretch gap-6 sm:gap-0">
                 <div class="image_container relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
-                  <img v-if="content.leftImgActive" class="object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImgActive}.webp`)" alt="">
-                  <img v-if="content.leftImgActive" class="duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
-                  <img v-if="!content.leftImgActive" class="duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
+                  <img v-if="content.leftImgActive" class="object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImgActive}.webp`)" alt="">
+                  <img v-if="content.leftImgActive" class="duration-100 top object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
+                  <img v-if="!content.leftImgActive" class="duration-100 object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.leftImg}.webp`)" alt="">
                 </div>
                 <div class="image_container relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1 sm:-left-6 sm:top-6 ">
-                  <img v-if="content.rightImgActive" class="object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImgActive}.webp`)" alt="">
-                  <img v-if="content.rightImgActive" class="duration-100 top object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
-                  <img v-if="!content.rightImgActive" class="duration-100 object-contain bg-neutral-200 absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
+                  <img v-if="content.rightImgActive" class="object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImgActive}.webp`)" alt="">
+                  <img v-if="content.rightImgActive" class="duration-100 top object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
+                  <img v-if="!content.rightImgActive" class="duration-100 object-contain absolute w-full h-full rounded-sm" :src="require(`@/assets/produits/${content.rightImg}.webp`)" alt="">
                 </div>
               </div>
               <div v-if="content.modal">
-                <Modal :contenttitle="content.type" :content="content.desc" :normes="content.normes" @close="content.modal = false" />
+                <Modal :contenttitle="content.type" :content="content.desc" :normes="content.normes" @close="content.modal = false; changeBodyScroll()" />
               </div>
-              <button v-if="content.desc" @click="content.modal = true" class="py-2 px-8 bg-black text-white rounded font-light w-fit duration-200 hover:shadow-md hover:shadow-neutral-600 mt-4">En savoir plus</button>
+              <button v-if="content.desc || content.normes" @click="content.modal = true; changeBodyScroll()" class="py-2 px-8 bg-black text-white rounded font-light w-fit duration-200 hover:shadow-md hover:shadow-neutral-600 mt-4">En savoir plus</button>
             </div>
           </div>
         </div>
@@ -83,15 +83,15 @@ export default {
               type: 'Broderie',
               leftImg: 'broderie_1',
               // leftImgActive: 'error',
-              rightImg: 'error',
+              rightImg: 'broderie_2',
               // rightImgActive: 'error',
             },
             {
               id: 2,
               type: 'Transfert',
-              leftImg: 'error',
+              leftImg: 'transfert_1',
               // leftImgActive: 'error',
-              rightImg: 'error',
+              rightImg: 'transfert_2',
               // rightImgActive: 'error',
             },
           ],
@@ -189,76 +189,52 @@ export default {
               // rightImg: 'error',
               // rightImgActive: 'error',
             },
-            // {
-            //   id: 2,
-            //   type: 'Pantalon Sportswear',
-            //   leftImg: 'pantalon_sportswear_1',
-            //   // leftImgActive: 'error',
-            //   rightImg: 'pantalon_sportswear_2',
-            //   // rightImgActive: 'error',
-            // },
-            // {
-            //   id: 3,
-            //   type: 'Veste multirisques',
-            //   desc: 'Ceci est une description de produit',
-            //   normes: [
-            //     { normeName: 'ISO 54' },
-            //   ],
-            //   leftImg: 'veste_mr_1',
-            //   leftImgActive: 'veste_mr_1_2',
-            //   rightImg: 'veste_mr_2',
-            //   // rightImgActive: 'error',
-            // },
             {
               id: 3,
               type: 'Multirisques',
-              desc: 'Les environnements ATEX (atmosphères explosives) sont des zones de travail présentant des risques potentiels d\'explosions.',
+              desc: 'Les differentes normes reprennent ou indique : <ul class="list-disc ml-6"><li>des exigences relatives aux matériaux et à la conception des vêtements de protection à dissipation électrostatique utilisés en complément d\'un système de mise à la terre dans le but d\'empêcher les décharges incendiaires.</li><li>des exigences de performance relatives aux vêtements de protection fabriqués avec des matériaux souples, conçus pour protéger le corps de l\'utilisateur, sauf les mains, contre la chaleur et/ou les flammes.</li><li>que c’est Vêtements de protection utilisés pendant le soudage.</li><li>que c’est un vêtement de protection contre les produits chimiques liquides.</li><li>La norme reprend les vêtements de protection utilisés pour réaliser des travaux lorsqu\'il y a un risque d\'exposition à un danger d\'arc électrique. Il spécifie les exigences et les méthodes d\'essai applicables aux matériaux et aux articles d\'habillement utilisés pour les vêtements de protection des travailleurs du domaine électrique contre les dangers thermiques d\'un arc électrique.</li><ul>',
               normes: [
-                { normeName: 'EN 14605' },
-                { normeName: 'EN 13034-6' },
+                {
+                  normeName: 'EN 1149-5',
+                  img: 'EN1149-5',
+                },
+                {
+                  normeName: 'EN ISO 11612',
+                  img: 'ENISO11612',
+                },
+                {
+                  normeName: 'EN ISO 11611',
+                  img: 'ENISO11611',
+                },
+                {
+                  normeName: 'EN 13034',
+                  img: 'EN13034',
+                },
+                {
+                  normeName: 'EN 61482-2',
+                  img: 'EN61482-2',
+                },
               ],
               leftImg: 'veste_mr_1',
               leftImgActive: 'veste_mr_1_2',
               rightImg: 'pantalon_mr_1',
               rightImgActive: 'pantalon_mr_1_2',
             },
-            // {
-            //   id: 4,
-            //   type: 'Pantalon multirisques',
-            //   desc: 'Ceci est une description de produit',
-            //   leftImg: 'pantalon_mr_1',
-            //   leftImgActive: 'pantalon_mr_1_2',
-            //   rightImg: 'pantalon_mr_2',
-            //   // rightImgActive: 'error',
-            // },
-            // {
-            //   id: 5,
-            //   type: 'Veste Haute Visibilité',
-            //   leftImg: 'veste_hv_1',
-            //   // leftImgActive: 'error',
-            //   rightImg: 'veste_hv_2',
-            //   // rightImgActive: 'error',
-            // },
             {
               id: 5,
               type: 'Haute Visibilité',
-              desc: 'Ce type d’EPI est indispensable pour assurer qu’un ouvrier soit bien à la vue de son entourage',
+              desc: 'Protection des personnes intervenant à pied sur le domaine routier à l\'occasion d\'un chantier ou d\'un danger temporaire, en les rendant visible de jour comme de nuit, dans la lumière des phares.',
               normes: [
-                { normeName: 'EN 20471' },
+                {
+                  normeName: 'EN 20471',
+                  img: 'EN-20471',
+                },
               ],
               leftImg: 'veste_hv_1',
               // leftImgActive: 'error',
               rightImg: 'patalon_hv_1',
               // rightImgActive: 'error',
             },
-            // {
-            //   id: 6,
-            //   type: 'Pantalon Haute Visibilité',
-            //   leftImg: 'patalon_hv_1',
-            //   // leftImgActive: 'error',
-            //   rightImg: 'patalon_hv_2',
-            //   // rightImgActive: 'error',
-            // },
             {
               id: 7,
               type: 'Vêtements imtemperies',
@@ -313,6 +289,13 @@ export default {
             {
               id: 1,
               type: 'Manutention',
+              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              normes: [
+                {
+                  normeName: 'EN388',
+                  img: 'EN388',
+                },
+              ],
               leftImg: 'gant_manutention_1',
               // leftImgActive: 'error',
               rightImg: 'gant_manutention_2',
@@ -321,6 +304,17 @@ export default {
             {
               id: 2,
               type: 'Anti coupure',
+              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              normes: [
+                {
+                  normeName: 'EN388',
+                  img: 'EN388',
+                },
+                {
+                  normeName: 'CUT-D',
+                  img: 'CUT-D',
+                },
+              ],
               leftImg: 'coupure_1',
               // leftImgActive: 'error',
               rightImg: 'coupure_2',
@@ -329,6 +323,21 @@ export default {
             {
               id: 3,
               type: 'Chimie',
+              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              normes: [
+                {
+                  normeName: 'EN388',
+                  img: 'EN388',
+                },
+                {
+                  normeName: 'ENISO374-1',
+                  img: 'ENISO374-1',
+                },
+                {
+                  normeName: 'ENISO374-5',
+                  img: 'ENISO374-5',
+                },
+              ],
               leftImg: 'chimi_1',
               // leftImgActive: 'error',
               rightImg: 'chimi_2',
@@ -337,6 +346,13 @@ export default {
             {
               id: 5,
               type: 'Cuir',
+              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              normes: [
+                {
+                  normeName: 'EN388',
+                  img: 'EN388',
+                },
+              ],
               leftImg: 'cuir_1',
               // leftImgActive: 'error',
               rightImg: 'cuir_2',
@@ -345,6 +361,17 @@ export default {
             {
               id: 6,
               type: 'Chaleur',
+              desc: 'Gant dont le comportement a l\'abrasion et au feu on était testé.',
+              normes: [
+                {
+                  normeName: 'EN388',
+                  img: 'EN388',
+                },
+                {
+                  normeName: 'EN407',
+                  img: 'EN407',
+                },
+              ],
               leftImg: 'chaleur_1',
               // leftImgActive: 'error',
               rightImg: 'chaleur_2',
@@ -353,6 +380,13 @@ export default {
             {
               id: 7,
               type: 'Froid',
+              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              normes: [
+                {
+                  normeName: 'EN388',
+                  img: 'EN388',
+                },
+              ],
               leftImg: 'gant_froid_1',
               // leftImgActive: 'error',
               rightImg: 'gant_froid_2',
@@ -361,6 +395,13 @@ export default {
             {
               id: 7,
               type: 'Alimentaire',
+              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              normes: [
+                {
+                  normeName: 'EN388',
+                  img: 'EN388',
+                },
+              ],
               leftImg: 'alimentaire_1',
               // leftImgActive: 'error',
               rightImg: 'alimentaire_2',
@@ -385,7 +426,18 @@ export default {
           contents: [
             {
               id: 1,
+              desc: 'Chaussures déperlante, avec une coque et une semelle anti- perforation en textile ou en acier.',
               type: 'Chaussure basse',
+              normes: [
+                {
+                  normeName: 'S3',
+                  img: '',
+                },
+                {
+                  normeName: 'EN 20345',
+                  img: '',
+                },
+              ],
               leftImg: 'chaussure_basse_1',
               // leftImgActive: 'error',
               rightImg: 'chaussure_basse_2',
@@ -394,6 +446,13 @@ export default {
             {
               id: 2,
               type: 'Chaussure BTP haute',
+              desc: 'Chaussure adaptée pour un milieu accidenté.',
+              // normes: [
+              //   {
+              //     normeName: '',
+              //     img: '',
+              //   },
+              // ],
               leftImg: 'chaussure_btp_haute_1',
               // leftImgActive: 'error',
               rightImg: 'chaussure_btp_haute_2_2',
@@ -402,6 +461,13 @@ export default {
             {
               id: 3,
               type: 'Chaussure BTP basse',
+              desc: 'Chaussure adaptée pour un milieu accidenté.',
+              normes: [
+                // {
+                //   normeName: '',
+                //   img: '',
+                // },
+              ],
               leftImg: 'chaussure_btp_basse_1',
               // leftImgActive: 'error',
               rightImg: 'chaussure_btp_basse_2',
@@ -478,6 +544,15 @@ export default {
     };
   },
   methods: {
+    changeBodyScroll() {
+      console.log('sa');
+      const body = document.querySelector('body');
+      if (body.style.overflowY === 'hidden') {
+        body.style.overflowY = 'scroll';
+      } else {
+        body.style.overflowY = 'hidden';
+      }
+    },
     showActiveImage() {
       this.activeImage = !this.activeImage;
     },
