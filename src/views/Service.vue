@@ -18,7 +18,7 @@
             <p class="w-full text-lg">Urgence de livraison sur vos EPI ? Phoenix, prend pour vous la précaution de garder un stock constant de chaussures de sécurité, gants et casques.</p>
           </div>
           <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
-            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/stock.png" alt="">
+            <img class="absolute w-full aspect-video rounded-sm object-contain" src="@/assets/stock.png" alt="">
           </div>
         </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
@@ -28,7 +28,7 @@
             <!-- <router-link class="hidden lg:block py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" to="/contact">Contactez nous</router-link> -->
           </div>
           <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
-            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/colis.png" alt="">
+            <img class="absolute w-full aspect-video rounded-sm object-contain" src="@/assets/livraison_par_paquetage.webp" alt="">
           </div>
         </div>
       </div>

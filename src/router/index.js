@@ -92,16 +92,14 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
+  // history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior() {
-    // if (to.meta.title !== 'Accueil') {
-    //   console.log('OK');
-    //   return { top: 0 };
-    // }
-    // console.log('pas OK');
-    // return savedPosition;
-  },
+  // scrollBehavior(savedPosition) {
+  //   return savedPosition || new Promise((resolve) => {
+  //     setTimeout(() => resolve({ top: 0, behavior: 'smooth' }), 300);
+  //   });
+  // },
 });
 
 router.afterEach((to) => {

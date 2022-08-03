@@ -95,6 +95,7 @@ export default {
   components: { Footer, Navbar },
   data() {
     return {
+      activeSubMenuProduits: false,
       showNavbar: false,
       showProduct: false,
       categorys: [
