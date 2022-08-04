@@ -6,16 +6,18 @@
     <div class="flex gap-8 items-center justify-between">
       <div>
         <router-link to="/">
-          <img class="h-12 md:h-14 -my-1 duration-200" src="./assets/logos/Logo_Phoenix_Vetements.svg" alt="logo Phoenix Vetements et protections">
+          <img class="h-12 md:h-14 -my-1 duration-200" src="./assets/logos/Logo_Phoenix_Vetements.svg" alt="logo Phoenix Vêtements et protections">
         </router-link>
       </div>
       <div class="w-1/2 flex justify-center items-center gap-4" :class="{'bg-black text-white shadow-lg hidden lg:flex': activeSubMenuProduits }">
         <router-link class="text-xl text-center w-1/2 bold duration-150 hover:-translate-y-0.5 group hover:text-[#2E4B92]" to="/">Accueil</router-link>
         <button @mouseenter="toggleProducts" @mouseleave="toggleProducts" @focus="toggleProducts" class="text-xl relative text-center w-1/2 bold duration-150 hover:-translate-y-0.5 group hover:text-[#2E4B92]" @click="openSubMenu" :class="{'underline underline-offset-4': activeSubMenuProduits }">
           Produits
-          <div v-if="showProduct" class="bg-white group-hover:text-orange-500 shadow-lg min-h-min min-w-max w-full position absolute inset-x-0 top-full flex flex-col p-4 gap-2">
-            <router-link @click="toggleProducts" class="text-xl text-left min-w-full bold duration-150 text-black hover:text-[#2E4B92] hover:-translate-x-0.5" to="/tailored">Vêtements sur mesure</router-link>
-            <router-link v-for="category in categorys" v-bind:key="category" @click="toggleProducts" class="text-xl text-left min-w-full bold duration-150 text-black hover:text-[#2E4B92] hover:-translate-x-0.5" :to="{ name: 'ProductDetails', params: { name: category.name }}">{{ category.name }}</router-link>
+          <div v-if="showProduct" class="cursor-default min-h-min min-w-max w-full position absolute -inset-x-8 top-0 ">
+            <dir class="bg-white shadow-lg m-8 flex flex-col p-4 gap-2">
+              <router-link @click="toggleProducts" class="text-xl text-left min-w-full bold duration-150 text-black hover:text-[#2E4B92] hover:-translate-x-0.5" to="/tailored">Vêtements sur mesure</router-link>
+              <router-link v-for="category in categorys" v-bind:key="category" @click="toggleProducts" class="text-xl text-left min-w-full bold duration-150 text-black hover:text-[#2E4B92] hover:-translate-x-0.5" :to="{ name: 'ProductDetails', params: { name: category.name }}">{{ category.name }}</router-link>
+            </dir>
           </div>
         </button>
         <router-link class="text-xl text-center w-1/2 bold duration-150 hover:-translate-y-0.5 group hover:text-[#2E4B92]" to="/service">Services</router-link>

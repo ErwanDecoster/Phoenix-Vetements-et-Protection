@@ -8,7 +8,7 @@
           <div class="flex flex-col gap-1">
             <p class="w-full text-2xl font-bold">Un logo sur vos vêtements ne suffit plus ?</p>
             <p class="text-lg">Parfait nous vous créons vos propres vêtements.</p>
-            <p class="text-lg">Démarquez vous en comumniquant par vos salariés en un vêtement unique et à votre image, comme Bert&You.</p>
+            <p class="text-lg">Démarquez-vous en communiquant par vos salariés en un vêtement unique et à votre image, comme Bert&You.</p>
           </div>
           <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="absolute w-full aspect-video rounded-sm object-cover" src="@/assets/sur_mesure.png" alt="">
@@ -34,7 +34,7 @@
             <p class="w-full text-2xl font-bold text-left">Nos points forts</p>
             <p class="text-lg font-bold">Nous vous offrons la posibilité de :</p>
             <ul class="list-disc list-inside">
-              <li class="text-lg">Realiser une fabrication même par petites quantités.</li>
+              <li class="text-lg">Réaliser une fabrication même par petites quantités..</li>
               <li class="text-lg">Nos vêtements s'adaptent au plus grand nombre de morphologies.</li>
               <li class="text-lg">Sans intermedaire maitriser vos coûts et votre stock.</li>
             </ul>

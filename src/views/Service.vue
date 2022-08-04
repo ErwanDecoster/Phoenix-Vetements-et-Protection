@@ -9,7 +9,7 @@
             <p class="w-full text-lg">Nous pouvons mettre sur chacun de vos vêtements un logo en format poitrine ou dos.</p>
           </div>
           <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
-            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/colis.png" alt="">
+            <img class="absolute w-full aspect-video rounded-sm object-contain" src="@/assets/serigraphie_et_broderie.png" alt="">
           </div>
         </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">

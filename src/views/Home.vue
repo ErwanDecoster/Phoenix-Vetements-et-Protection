@@ -59,7 +59,7 @@
             </router-link>
           </div>
           <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
-            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/colis.png" alt="">
+            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/livraison_par_paquetage.webp" alt="">
           </div>
         </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
@@ -81,7 +81,7 @@
           <div class="sm:order-1 w-full flex flex-col gap-2">
             <h2 class="w-full text-2xl font-bold">Des EPI pour tous les risques</h2>
             <p class="text-md">
-              De la protection de la tête aux chaussures de securité.
+              De la protection de la tête aux chaussures de sécurité.
             </p>
             <router-link class="py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" :to="{ name : 'ProductEPI' }">
               Voir des exemples

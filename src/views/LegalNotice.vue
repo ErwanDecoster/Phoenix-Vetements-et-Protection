@@ -38,7 +38,7 @@
           <p class="m-0">Pour toute demande de suppresion des données veuiller effectuer une demande par email a : <a class="text-blue-700 hover:text-blue-300 duration-200" href="mailto:contact@phoenix-vetements.com">contact@phoenix-vetements.com</a> ou par courrier à l'addresse : 135 rue des frères Seguin 07340 DAVEZIEUX</p>
         </div>
         <div>
-          <p class="text-xl font-bold">RESPONSABILITÉ DE PHOENIX VETEMENTS ET PROTECTION</p>
+          <p class="text-xl font-bold">RESPONSABILITÉ DE PHOENIX VÊTEMENTS ET PROTECTION</p>
           <p class="m-0">Dans les conditions autorisées par la loi, la SASU PHOENIX VÊTEMENTS ET PROTECTION n'encourt aucune responsabilité :</p>
           <p class="m-0">
             pour toute imprécision, inexactitude, omission, ou pour tous dommages résultant d'une intrusion d'un tiers ayant entraîné une modification des informations mises à disposition sur le Site,

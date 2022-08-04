@@ -119,7 +119,7 @@ export default {
             },
             {
               id: 2,
-              type: 'Casques anti bruits',
+              type: 'Casques anti-bruits',
               leftImg: 'casque_anti_bruits_1',
               // leftImgActive: 'error',
               rightImg: 'casque_anti_bruits_2',
@@ -127,7 +127,7 @@ export default {
             },
             {
               id: 3,
-              type: 'Lunettes et Lunettes a verre corecteur ',
+              type: 'Lunettes et Lunettes à verre correcteur ',
               leftImg: 'lunette_et_lunette_a_verre_corecteur_1',
               // leftImgActive: 'error',
               rightImg: 'lunette_et_lunette_a_verre_corecteur_2',
@@ -143,7 +143,7 @@ export default {
             },
             {
               id: 5,
-              type: 'Bouchon et Bouchon moulé',
+              type: 'Bouchons et bouchons moulés',
               leftImg: 'bouchon_et_bouchon_moule_1',
               // leftImgActive: 'error',
               rightImg: 'bouchon_et_bouchon_moule_2',
@@ -153,7 +153,7 @@ export default {
         },
         {
           name: 'Vêtements',
-          desc: 'Desciption des produit de la categorie vetements',
+          desc: 'Desciption des produit de la categorie vêtements',
           id: 3,
           fourniseurs: [
             { name: 'Logo_Newwave' },
@@ -192,7 +192,7 @@ export default {
             {
               id: 3,
               type: 'Multirisques',
-              desc: 'Les differentes normes reprennent ou indique : <ul class="list-disc ml-6"><li>des exigences relatives aux matériaux et à la conception des vêtements de protection à dissipation électrostatique utilisés en complément d\'un système de mise à la terre dans le but d\'empêcher les décharges incendiaires.</li><li>des exigences de performance relatives aux vêtements de protection fabriqués avec des matériaux souples, conçus pour protéger le corps de l\'utilisateur, sauf les mains, contre la chaleur et/ou les flammes.</li><li>que c’est Vêtements de protection utilisés pendant le soudage.</li><li>que c’est un vêtement de protection contre les produits chimiques liquides.</li><li>La norme reprend les vêtements de protection utilisés pour réaliser des travaux lorsqu\'il y a un risque d\'exposition à un danger d\'arc électrique. Il spécifie les exigences et les méthodes d\'essai applicables aux matériaux et aux articles d\'habillement utilisés pour les vêtements de protection des travailleurs du domaine électrique contre les dangers thermiques d\'un arc électrique.</li><ul>',
+              desc: 'Les différentes normes reprennent où indique : <ul class="list-disc ml-6"><li>Exigences relatives aux matériaux et à la conception des vêtements de protection à dissipation électrostatique utilisés en complément d\'un système de mise à la terre dans le but d\'empêcher les décharges incendiaires.</li><li>Exigences de performance relatives aux vêtements de protection fabriqués avec des matériaux souples, conçus pour protéger le corps de l\'utilisateur, sauf les mains, contre la chaleur et/ou les flammes.</li><li>Les vêtements de protection utilisés pendant le soudage.</li><li>Les vêtements de protection contre les produits chimiques liquides.</li><li>Les vêtements de protection utilisés pour réaliser des travaux lorsqu\'il y a un risque d\'exposition à un danger d\'arc électrique. Il spécifie les exigences et les méthodes d\'essai applicables aux matériaux et aux articles d\'habillement utilisés pour les vêtements de protection des travailleurs du domaine électrique contre les dangers thermiques d\'un arc électrique.</li><ul>',
               normes: [
                 {
                   normeName: 'EN 1149-5',
@@ -400,6 +400,10 @@ export default {
                 {
                   normeName: 'EN388',
                   img: 'EN388',
+                },
+                {
+                  normeName: '',
+                  img: 'contact_alimentaire',
                 },
               ],
               leftImg: 'alimentaire_1',

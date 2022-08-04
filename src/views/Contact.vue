@@ -5,7 +5,7 @@
         <p class="w-full text-4xl font-bold text-left">Localisation</p>
         <div class="grid md:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="w-full flex flex-col gap-2">
-            <p class="w-full text-left text-lg">Situé dans le nord de l'ardèche Phoenix Vetements se trouve au : <b>135 Rue des Frères Seguin, 07430 Davézieux</b></p>
+            <p class="w-full text-left text-lg">Situé dans le nord de l'ardèche Phoenix Vêtements se trouve au : <b>135 Rue des Frères Seguin, 07430 Davézieux</b></p>
             <p class="text-lg">Tel : <a class="text-blue-700 hover:text-blue-300 duration-200" href="tel:0475692979">04 75 69 29 79</a></p>
             <p class="text-lg">Email : <a class="text-blue-700 hover:text-blue-300 duration-200" href="mailto:contact@phoenix-vetements.com">contact@phoenix-vetements.com</a></p>
           </div>
