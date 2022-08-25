@@ -22,9 +22,6 @@
             </p>
             <router-link class="hidden lg:block py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600" to="/contact">Contactez nous</router-link>
           </div>
-          <!-- <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
-            <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-contain" src="@/assets/place.png" alt="">
-          </div> -->
           <iframe title="Carte Google Maps de la lacalisation de l'entreprise" class="w-full aspect-video p-2 rounded border-solid border-2 border-black" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11234.627554221119!2d4.694951673046876!3d45.2547305955475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee55ab29a5ed411d!2sPhoenix%20V%C3%AAtements%20et%20Protection!5e0!3m2!1sfr!2sfr!4v1643039449658!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="justify-items-center flex flex-col gap-10">
@@ -41,34 +38,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="bg-black">
-      <div class="py-10 m-auto max-w-screen-lg px-7 flex flex-col gap-14 text-white relative">
-        <p class="text-left text-xl font-semibold">Actualité</p>
-        <div class="grid grid-cols-2 justify-items-center gap-28 relative">
-          <button class="absolute top-1/2 -translate-y-1/2 -left-12 h-24 w-4 scale-150">
-            <svg class="max-h-full" viewBox="0 0 21 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.5 48L1 24.5L19.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="w-full flex flex-col gap-2">
-            <h2 class="text-left text-xl font-semibold">
-              Notre projet pour 2023
-            </h2>
-            <p class="w-full text-m text-left">
-              Une nouvelle adresse, un nouveau batiment, on avais besoins de place en 2023, de plus en plus de clients nous font confiance maintenent on grandis on a besoin de beaucoup de place
-            </p>
-          </div>
-          <div class="w-full relative">
-            <img class="aspect-video border-2 border-white rounded object-cover" src="" alt="">
-          </div>
-        <button class="absolute top-1/2 -translate-y-1/2 -right-12 h-24 w-4 scale-150">
-          <svg class="rotate-180 max-h-full" viewBox="0 0 21 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.5 48L1 24.5L19.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        </div>
-      </div>
-    </div> -->
     <NewsCarousel :NewsSlide="NewsSlide"/>
     <div >
       <div class="py-10 mt-10 m-auto max-w-screen-lg px-7 flex flex-col gap-14">
@@ -79,16 +48,6 @@
           <img class="w-24 h-24" v-for="el in TheyTrustUs" v-bind:key="el" :src="require(`@/assets/logos/${el.img}.svg`)" alt="">
         </div>
       </div>
-      <!-- <div class="py-10 mt-10 m-auto max-w-screen-lg px-7 flex flex-col gap-14">
-        <p class="w-full text-xl font-bold text-left">
-          Nous travallons avec eux
-        </p>
-        <div class="flex justify-evenly gap-28 flex-wrap">
-            <img class="w-24 h-24 border border-black" src="" alt="">
-            <img class="w-24 h-24 border border-black" src="" alt="">
-            <img class="w-24 h-24 border border-black" src="" alt="">
-        </div>
-      </div> -->
     </div>
     <ContactForm></ContactForm>
   </div>
@@ -161,6 +120,9 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   },
 };
 </script>

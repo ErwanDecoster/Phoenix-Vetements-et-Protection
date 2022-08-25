@@ -26,7 +26,6 @@
           </div>
           <div class="flex flex-wrap text-left gap-2 col-span-2 sm:col-span-1 sm:flex-col md:flex-row ">
             <label class="w-max" for="tel">Téléphone : </label>
-            <!-- <label class="w-max" for="tel">Téléphone : <span class="text-xs scale-110 inline-block -translate-y-2">Optionnel</span></label> -->
             <input class="border-b-2 border-neutral-900 px-2 w-full max-w-xs duration-200 sm:w-auto" type="tel" id="tel" name="tel" v-model="tel">
           </div>
           <div class="grid text-left gap-2 col-span-2">
@@ -148,16 +147,14 @@ export default {
     },
     sendEmail() {
       smtp.send({
-        Host: 'smtp.gmail.com',
-        Username: 'wanerd2@gmail.com',
-        Password: 'qjgwacsljxwhykjr',
-        // Host: 'smtp.ionos.fr',
-        // Username: 'website@phoenix-vetements.com',
-        // Password: 'bJdz2T?8G6FUTx;',
-        // Password: 'Pvpphoenix18',
+        SecureToken: '0c9432ee-c7f8-4e31-920b-da67242eae2a',
+        // To: 'wanerd2@gmail.com',
         // To: 'contact@phoenix-vetements.com',
-        To: 'wanerd2@gmail.com',
         From: 'website@phoenix-vetements.com',
+        // SecureToken: 'fa86ab49-ae28-452c-88ea-e4f975d701ed',
+        To: 'wanerd2@gmail.com',
+        // To: 'contact@phoenix-vetements.com',
+        // From: 'wanerd2@gmail.com',
         Subject: 'Formulaire SiteWeb',
         Body: `<html><h2>${this.name} - ${this.company}</h2><p style="font-size: 14px; margin: 0;"><strong>email : ${this.email}</strong></p><p style="font-size: 14px; margin: 0;"><strong>tel : ${this.tel}</strong></p><br></br><pre style="font-size: 14px;  margin: 0;"><strong>message : </strong><br>${this.message}</pre></html>`,
       }).then(
@@ -169,7 +166,6 @@ export default {
       if (message === 'OK') {
         this.messageSend = true;
         console.log('is send');
-        // eslint-disable-next-line
         setTimeout(() => {
           this.messageSend = false;
           this.errors = [];

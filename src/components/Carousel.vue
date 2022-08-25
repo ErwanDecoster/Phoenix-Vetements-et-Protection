@@ -5,7 +5,6 @@
         <path d="M19.5 48L1 24.5L19.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
-    <!-- <div class="slides overflow-hidden relative w-full p-2 rounded border-solid border-2 border-white aspect-video duration-200 hover:p-1"> -->
     <div class="slides relative w-full p-2 rounded border-solid border-2 border-white aspect-video duration-200 hover:p-1">
       <div class="absolute overflow-hidden w-full h-full">
         <transition-group tag="div" class="carousel flex justify-center items-center overflow-hidden h-full ">
@@ -45,7 +44,6 @@ export default {
     const carousel = document.querySelector('.carousel');
     carousel.style.width = `calc(100% * ${this.slides.length})`;
     carousel.classList.add(`translate-x-[-${100 / this.slides.length}%]`);
-    // translate-x-[-33%]
   },
 };
 </script>

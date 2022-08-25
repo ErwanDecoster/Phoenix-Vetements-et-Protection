@@ -60,7 +60,6 @@ export default {
   methods: {
     openSubMenu() {
       this.activeSubMenuProduits = !this.activeSubMenuProduits;
-      console.log(this.activeSubMenuProduits);
     },
     closeNavbar() {
       this.$emit('close');

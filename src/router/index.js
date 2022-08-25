@@ -80,7 +80,6 @@ const routes = [
       title: 'Produits - EPI',
     },
   },
-  // catchall 404
   {
     path: '/:catchAll(.*)',
     name: '',
@@ -93,17 +92,10 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  // history: createWebHistory(process.env.BASE_URL),
   routes,
-  // scrollBehavior(savedPosition) {
-  //   return savedPosition || new Promise((resolve) => {
-  //     setTimeout(() => resolve({ top: 0, behavior: 'smooth' }), 300);
-  //   });
-  // },
 });
 
 router.afterEach((to) => {
-  // console.log(from);
   document.title = to.meta.title;
 });
 

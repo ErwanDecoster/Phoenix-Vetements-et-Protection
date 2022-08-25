@@ -20,7 +20,7 @@
             </dir>
           </div>
         </button>
-        <router-link class="text-xl text-center w-1/2 bold duration-150 hover:-translate-y-0.5 group hover:text-[#2E4B92]" to="/service">Services</router-link>
+        <router-link class="text-xl text-center w-1/2 bold duration-150 hover:-translate-y-0.5 group hover:text-[#2E4B92] z-10" to="/service">Services</router-link>
         <router-link class="text-xl text-center w-1/2 bold duration-150 hover:-translate-y-0.5 group hover:text-[#2E4B92]" to="/about">A propos</router-link>
         <router-link class="text-xl text-center w-1/2 bold duration-150 hover:-translate-y-0.5 group hover:text-[#2E4B92]" to="/contact">Contact</router-link>
       </div>

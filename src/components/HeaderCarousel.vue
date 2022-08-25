@@ -81,7 +81,6 @@ export default {
       const slide = document.querySelectorAll('.slide');
       const size = slide[0].offsetWidth;
       slideContainer.style.transform = `translateX(${-size * this.counter}px)`;
-      // --
       const slideText = document.querySelectorAll('.slide-text');
       const slideContainerText = document.querySelector('.slide-container-text');
       slideContainerText.style.transition = 'transform 0.4s ease-in-out';
@@ -94,13 +93,11 @@ export default {
     this.slidesLength = this.slides.length - 1;
     const slideContainer = document.querySelector('.slide-container');
     const slide = document.querySelectorAll('.slide');
-    // --
     const slideContainerText = document.querySelector('.slide-container-text');
     const slideText = document.querySelectorAll('.slide-text');
     setTimeout(() => {
       const size = slide[0].offsetWidth;
       slideContainer.style.transform = `translateX(${-size * this.counter}px)`;
-      // --
       const sizeText = slideText[0].offsetWidth;
       slideContainerText.style.transform = `translateX(${-sizeText * this.counter}px)`;
     }, 100);
@@ -111,7 +108,6 @@ export default {
         this.counter = slide.length - 2;
         const size = slide[0].offsetWidth;
         slideContainer.style.transform = `translateX(${-size * this.counter}px)`;
-        // --
         const sizeText = slideText[0].offsetWidth;
         slideContainerText.style.transform = `translateX(${-sizeText * this.counter}px)`;
       }
@@ -121,7 +117,6 @@ export default {
         this.counter = slide.length - this.counter;
         const size = slide[0].offsetWidth;
         slideContainer.style.transform = `translateX(${-size * this.counter}px)`;
-        // --
         const sizeText = slideText[0].offsetWidth;
         slideContainerText.style.transform = `translateX(${-sizeText * this.counter}px)`;
       }
@@ -129,7 +124,6 @@ export default {
     window.addEventListener('resize', () => {
       const size = slide[0].offsetWidth;
       slideContainer.style.transform = `translateX(${-size * this.counter}px)`;
-      // --
       const sizeText = slideText[0].offsetWidth;
       slideContainerText.style.transform = `translateX(${-sizeText * this.counter}px)`;
     });

@@ -82,6 +82,9 @@ import ContactForm from '../components/ContactForm.vue';
 export default {
   name: 'App',
   components: { ContactForm },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 // @ is an alias to /src
 </script>

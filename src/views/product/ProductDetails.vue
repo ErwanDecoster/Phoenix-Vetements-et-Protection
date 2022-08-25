@@ -549,7 +549,6 @@ export default {
   },
   methods: {
     changeBodyScroll() {
-      console.log('sa');
       const body = document.querySelector('body');
       if (body.style.overflowY === 'hidden') {
         body.style.overflowY = 'scroll';
@@ -560,6 +559,12 @@ export default {
     showActiveImage() {
       this.activeImage = !this.activeImage;
     },
+  },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
+  updated() {
+    window.scrollTo(0, 0);
   },
 };
 </script>

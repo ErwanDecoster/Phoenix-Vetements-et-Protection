@@ -12,7 +12,6 @@
               112 fournisseurs : plus de 50 000 réferences.<br>
             </p>
           </div>
-          <!-- <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1"> -->
           <div class="relative w-full p-2 rounded bg-[#2E4B92] aspect-video duration-200 hover:p-1">
             <img class="bg-neutral-200 absolute w-full aspect-video rounded-sm object-cover" src="@/assets/2vets.png" alt="">
           </div>
@@ -98,15 +97,11 @@
 </template>
 
 <script>
-// import { ref } from 'ref';
-// import gsap from 'gsap';
 import ContactForm from '../components/ContactForm.vue';
-// import Carousel from '../components/Carousel.vue';
 import HeaderCarousel from '../components/HeaderCarousel.vue';
 
 export default {
   name: 'App',
-  // components: { ContactForm, Carousel, HeaderCarousel },
   components: { ContactForm, HeaderCarousel },
   data() {
     return {
@@ -134,6 +129,9 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   },
 };
 </script>
