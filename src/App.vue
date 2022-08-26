@@ -16,7 +16,7 @@
           <div v-if="showProduct" class="cursor-default min-h-min min-w-max w-full position absolute -inset-x-8 top-0 ">
             <dir class="bg-white shadow-lg m-8 flex flex-col p-4 gap-2">
               <router-link @click="toggleProducts" class="text-xl text-left min-w-full bold duration-150 text-black hover:text-[#2E4B92] hover:-translate-x-0.5" to="/tailored">Vêtements sur mesure</router-link>
-              <router-link v-for="category in categorys" v-bind:key="category" @click="toggleProducts" class="text-xl text-left min-w-full bold duration-150 text-black hover:text-[#2E4B92] hover:-translate-x-0.5" :to="{ name: 'ProductDetails', params: { name: category.name }}">{{ category.name }}</router-link>
+              <router-link v-for="category in categorys" v-bind:key="category" @click="toggleProducts(); gotop()" class="text-xl text-left min-w-full bold duration-150 text-black hover:text-[#2E4B92] hover:-translate-x-0.5" :to="{ name: 'ProductDetails', params: { name: category.name }}">{{ category.name }}</router-link>
             </dir>
           </div>
         </button>
@@ -137,6 +137,9 @@ export default {
     },
     toggleProducts() {
       this.showProduct = !this.showProduct;
+    },
+    gotop() {
+      window.scrollTo(0, 0);
     },
   },
 };

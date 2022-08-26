@@ -289,7 +289,7 @@ export default {
             {
               id: 1,
               type: 'Manutention',
-              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              desc: 'Gant manutention. Un large choix de disponible : Nous consulter.',
               normes: [
                 {
                   normeName: 'EN388',
@@ -304,7 +304,7 @@ export default {
             {
               id: 2,
               type: 'Anti coupure',
-              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              desc: 'Gant anti coupure. Un large choix de disponible : Nous consulter.',
               normes: [
                 {
                   normeName: 'EN388',
@@ -323,7 +323,7 @@ export default {
             {
               id: 3,
               type: 'Chimie',
-              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              desc: 'Gant chimie. Un large choix de disponible : Nous consulter.',
               normes: [
                 {
                   normeName: 'EN388',
@@ -346,7 +346,7 @@ export default {
             {
               id: 5,
               type: 'Cuir',
-              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              desc: 'Gant cuir. Un large choix de disponible : Nous consulter.',
               normes: [
                 {
                   normeName: 'EN388',
@@ -361,7 +361,7 @@ export default {
             {
               id: 6,
               type: 'Chaleur',
-              desc: 'Gant dont le comportement a l\'abrasion et au feu on était testé.',
+              desc: 'Gant chaleur. Un large choix de disponible : Nous consulter.',
               normes: [
                 {
                   normeName: 'EN388',
@@ -380,7 +380,7 @@ export default {
             {
               id: 7,
               type: 'Froid',
-              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              desc: 'Gant froid. Un large choix de disponible : Nous consulter.',
               normes: [
                 {
                   normeName: 'EN388',
@@ -393,9 +393,9 @@ export default {
               // rightImgActive: 'error',
             },
             {
-              id: 7,
+              id: 8,
               type: 'Alimentaire',
-              desc: 'Gant dont le comportement à l\'abrasion a été testé.',
+              desc: 'Gant alimentaire. Un large choix de disponible : Nous consulter.',
               normes: [
                 {
                   normeName: 'EN388',
@@ -563,9 +563,9 @@ export default {
   mounted() {
     window.scrollTo(0, 0);
   },
-  updated() {
-    window.scrollTo(0, 0);
-  },
+  // beforeUnmount() {
+  //   window.scrollTo(0, 0);
+  // },
 };
 </script>
 

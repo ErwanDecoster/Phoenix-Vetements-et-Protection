@@ -2,6 +2,7 @@
   <div class="service">
     <div>
       <div class="py-20 m-auto max-w-screen-lg px-7 flex flex-col gap-20">
+        <button @click="$router.go(-1)" style="transform: translateX(calc(-100% - 2em))" class="hidden lg:block fixed py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600 border border-white">Retour</button>
         <h1 class="w-full text-4xl font-bold">Service</h1>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="w-full flex flex-col gap-2">

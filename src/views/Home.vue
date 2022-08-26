@@ -1,8 +1,19 @@
 <template>
   <div class="home selection:bg-neutral-400  ">
     <HeaderCarousel :headerCarousel="headerCarousel" />
-    <div >
-      <div class="py-10 m-auto max-w-screen-lg pl-7 pr-11 flex flex-col gap-20">
+    <div>
+      <div class="py-10 m-auto max-w-screen-lg relative pl-7 pr-11 flex flex-col gap-20">
+        <div class="hidden 2xl:block absolute right-0 translate-x-full bg-white shadow-md rounded px-4 py-2">
+          <p class="font-bold text-center text-lg">Téléchargeable :</p>
+          <ul class="mt-2 flex flex-col">
+            <li class="mx-auto min-w-max">
+              <a :href="`documents/catalogue_epi.pdf`" target="_blank" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Phoenix</a>
+            </li>
+            <li class="mx-auto min-w-max">
+              <a :href="`documents/catalogue_hygiène.pdf`" target="_blank" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Hygiene</a>
+            </li>
+          </ul>
+        </div>
         <div class="grid sm:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="w-full flex flex-col gap-2">
             <p class="w-full text-3xl font-bold text-left">Des vêtements aux EPI nous avons ce qu'il vous faut</p>

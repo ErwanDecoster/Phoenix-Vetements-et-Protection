@@ -1,9 +1,9 @@
 <template>
   <div class="service">
     <div>
-      <div class="py-20 lg:py-10 m-auto max-w-screen-lg px-7 flex flex-col gap-20">
+      <div class="mt-10 py-20 lg:py-10 m-auto max-w-screen-lg px-7 flex flex-col gap-20">
         <h1 class="w-full text-4xl font-bold">Produits - Vêtements sur mesure</h1>
-        <button @click="$router.go(-1)" style="transform: translateX(calc(-100% - 2em))" class="hidden lg:block fixed py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600">Retour</button>
+        <button @click="$router.go(-1)" style="transform: translateX(calc(-100% - 2em))" class="hidden lg:block fixed py-2 px-8 bg-black text-white rounded font-light w-fit mt-auto duration-200 hover:shadow-md hover:shadow-neutral-600 border border-white">Retour</button>
         <div class="grid md:grid-cols-2 justify-items-center md:gap-28 gap-10">
           <div class="flex flex-col gap-1">
             <p class="w-full text-2xl font-bold">Un logo sur vos vêtements ne suffit plus ?</p>

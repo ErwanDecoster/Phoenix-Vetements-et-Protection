@@ -42,10 +42,10 @@
           <p class="font-bold text-center">Téléchargeable :</p>
           <ul class="mt-4 flex flex-col">
             <li class="mx-auto min-w-max">
-              <a :href="`documents/catalogue_hygiène.pdf`" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Hygiene</a>
+              <a :href="`documents/catalogue_epi.pdf`" target="_blank" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Phoenix</a>
             </li>
             <li class="mx-auto min-w-max">
-              <a :href="`documents/catalogue_epi.pdf`" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Fournisseur</a>
+              <a :href="`documents/catalogue_hygiène.pdf`" target="_blank" class="block px-4 py-2 text-center hover:text-[#2E4B92] decoration-neutral-700 underline-offset-2 ">Catalogue Hygiene</a>
             </li>
           </ul>
         </div>

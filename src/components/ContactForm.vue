@@ -147,15 +147,13 @@ export default {
     },
     sendEmail() {
       smtp.send({
-        SecureToken: '0c9432ee-c7f8-4e31-920b-da67242eae2a',
-        // To: 'wanerd2@gmail.com',
-        // To: 'contact@phoenix-vetements.com',
-        From: 'website@phoenix-vetements.com',
-        // SecureToken: 'fa86ab49-ae28-452c-88ea-e4f975d701ed',
-        To: 'wanerd2@gmail.com',
-        // To: 'contact@phoenix-vetements.com',
-        // From: 'wanerd2@gmail.com',
-        Subject: 'Formulaire SiteWeb',
+        // Host: 'smtp.elasticemail.com',
+        // Username: 'contact@phoenix-vetements.com',
+        // Password: '8FE4112C775DDB1CA607BEFB001FFE820015',
+        SecureToken: '6b23f183-2c30-48f9-ac28-7e4119931aaf',
+        From: 'wanerd2@gmail.com',
+        To: 'contact@phoenix-vetements.com',
+        Subject: 'Contact SiteWeb',
         Body: `<html><h2>${this.name} - ${this.company}</h2><p style="font-size: 14px; margin: 0;"><strong>email : ${this.email}</strong></p><p style="font-size: 14px; margin: 0;"><strong>tel : ${this.tel}</strong></p><br></br><pre style="font-size: 14px;  margin: 0;"><strong>message : </strong><br>${this.message}</pre></html>`,
       }).then(
         (message) => this.verifEmailSending(message),
